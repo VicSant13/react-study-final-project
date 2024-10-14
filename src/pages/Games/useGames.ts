@@ -26,7 +26,7 @@ export default function Games() {
     return useQuery({
         queryKey:['games'],
         queryFn: ()=>
-            axios.get<Game>('https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=15')
+            axios.get<Game[]>('https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=15')
             .then(response=>response.data)
     })
 }
